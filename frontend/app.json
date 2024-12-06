@@ -1,0 +1,31 @@
+{
+    "expo": {
+      "name": "Creci",
+      "slug": "creci",
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/images/icon.png",
+      "splash": {
+        "image": "./assets/images/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#FCE4EC"
+      },
+      "updates": {
+        "fallbackToCacheTimeout": 0
+      },
+      "assetBundlePatterns": ["**/*"],
+      "ios": {
+        "supportsTablet": true
+      },
+      "android": {
+        "adaptiveIcon": {
+          "foregroundImage": "./assets/images/adaptive-icon.png",
+          "backgroundColor": "#FCE4EC"
+        }
+      },
+      "web": {
+        "favicon": "./assets/images/favicon.png"
+      }
+    }
+  }
+  
