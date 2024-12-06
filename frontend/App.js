@@ -1,33 +1,52 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Diario from "./screens/Diario";
-import Momentos from "./screens/Momentos";
-import Salud from "./screens/Salud";
-import Lactancia from "./screens/Lactancia";
-import Crecimiento from "./screens/Crecimiento";
-import WhatsApp from "./screens/WhatsApp";
-
-const Tab = createBottomTabNavigator();
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 export default function App() {
+  const handlePress = () => {
+    console.log("Botón presionado");
+  };
+
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={{
-          headerShown: false,
-          tabBarStyle: { backgroundColor: "#FCE4EC" },
-          tabBarActiveTintColor: "#D81B60",
-          tabBarInactiveTintColor: "#9E9E9E",
-        }}
-      >
-        <Tab.Screen name="Diario" component={Diario} />
-        <Tab.Screen name="Momentos" component={Momentos} />
-        <Tab.Screen name="Salud" component={Salud} />
-        <Tab.Screen name="Lactancia" component={Lactancia} />
-        <Tab.Screen name="Crecimiento" component={Crecimiento} />
-        <Tab.Screen name="WhatsApp" component={WhatsApp} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <View style={styles.container}>
+      <Text style={styles.title}>Creci</Text>
+      <Text style={styles.subtitle}>(Tu acompañante en el arte de ser mamá)</Text>
+      <TouchableOpacity style={styles.button} onPress={handlePress}>
+        <Text style={styles.buttonText}>Empezar →</Text>
+      </TouchableOpacity>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#FCE4EC",
+    padding: 20,
+  },
+  title: {
+    fontSize: 36,
+    color: "#D81B60",
+    fontWeight: "bold",
+    marginBottom: 10,
+    textAlign: "center",
+  },
+  subtitle: {
+    fontSize: 16,
+    color: "#757575",
+    marginBottom: 30,
+    textAlign: "center",
+  },
+  button: {
+    backgroundColor: "#D81B60",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+  },
+  buttonText: {
+    color: "#FFF",
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+});

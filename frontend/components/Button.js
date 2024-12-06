@@ -14,9 +14,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#D81B60",
     paddingVertical: 10,
     paddingHorizontal: 20,
-    borderRadius: 5,
+    borderRadius: 8,
     alignItems: "center",
-    justifyContent: "center",
   },
   text: {
     color: "#FFF",
@@ -24,3 +23,4 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
+
