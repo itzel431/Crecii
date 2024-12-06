@@ -1,9 +1,9 @@
 import React from "react";
-import "./App.css"; // Importación de los estilos desde App.css
+import "./App.css"; // Importación del archivo de estilos
 
 function App() {
   const handleStart = () => {
-    alert("¡Bienvenido a Creci! Próximamente funcionalidades...");
+    alert("¡Bienvenido a Creci!");
   };
 
   return (
