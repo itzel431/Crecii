@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
 import Diario from "./pages/Diario";
@@ -12,12 +12,12 @@ import WhatsApp from "./pages/WhatsApp";
 function App() {
   return (
     <Router>
-      <div className="App">
-        <header>
+      <div className="app">
+        <header className="header">
           <h1>Creci</h1>
-          <p>(Tu acompañante en el arte de ser mamá)</p>
+          <p>Tu acompañante en el arte de ser mamá</p>
         </header>
-        <nav>
+        <nav className="nav">
           <Link to="/diario">Diario</Link>
           <Link to="/momentos">Momentos</Link>
           <Link to="/salud">Salud</Link>
@@ -25,7 +25,7 @@ function App() {
           <Link to="/crecimiento">Crecimiento</Link>
           <Link to="/whatsapp">WhatsApp</Link>
         </nav>
-        <main>
+        <main className="main">
           <Routes>
             <Route path="/diario" element={<Diario />} />
             <Route path="/momentos" element={<Momentos />} />
